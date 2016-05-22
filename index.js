@@ -33,6 +33,7 @@ Elixir.extend('fontastic', function(apiKey, stylePath, fontDir, fontName) {
 
     if (fontName !== undefined) {
         options.font_name = fontName;
+        options.hashable = true;
     }
 
     new Task('fontastic', function() {
