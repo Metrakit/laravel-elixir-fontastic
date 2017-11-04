@@ -17,7 +17,7 @@ var Task = Elixir.Task;
 Elixir.extend('fontastic', function(apiKey, stylePath, fontDir, fontName) {
 
     if (apiKey === undefined) {
-        return new Elixir.Log.message('ERROR: API key missing for Fontastic');
+        // return new Elixir.Log.message('ERROR: API key missing for Fontastic');
     }
 
     fontDir = (fontDir === undefined) ? 'fonts' : fontDir;
@@ -37,7 +37,7 @@ Elixir.extend('fontastic', function(apiKey, stylePath, fontDir, fontName) {
     }
 
     new Task('fontastic', function() {
-        new Elixir.Log.message('Downloading from Fontastic...');
+        // new Elixir.Log.message('Downloading from Fontastic...');
         return gulp.src('')
                    .pipe(fontastic(options));
     });
